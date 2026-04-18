@@ -1,0 +1,28 @@
+# Secrets
+.env
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# FAISS indexes (large, rebuilt from source)
+faiss_*/
+vectorstore/
+*.faiss
+*.pkl
+
+# Generated outputs (xlsx deliverables)
+*.xlsx
+
+# Downloaded PDFs / data cache
+pdfs/
+*.pdf
+!Assignment_2_RAG.md
+!From\ AI\ Model\ to\ AI\ Agent\ -\ Assignment\ 2\ -\ Google\ Docs.pdf
