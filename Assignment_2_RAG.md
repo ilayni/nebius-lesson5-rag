@@ -15,6 +15,17 @@ By the end of this assignment you'll have built a working RAG pipeline, evaluate
 4. **Note:** I usually don't run the notebook, but there should be placeholders for the data loading, api_key etc. in case I do need to run it (it happens. Rarely, but it happens).
 5. Having said that, **you** need to run it of course, and outputs should be present.
 
+### note, comments
+As stated in the exercise, you will probably get bad results. Note also the Dataset integrity part in the paper.
+Yet this is considered an well-known benchmark in the RAG evaluation space, and dealing with hard data is unfortunately (?) part of the story.
+
+Just to make clear you will not be graded on the quality of the scores. 
+You will be graded on how you implemented the pipeline and what and how you did when trying to improve the results.
+
+One thing you can try, for example, is creating a small vector store with 1-2 docs (just change the input to the vector store creation code) and then try running the retrieval code on those only and see what you get, and what goes wrong.
+
+
+
 ## Dataset
 
 We'll use the [financebench dataset](https://huggingface.co/datasets/PatronusAI/financebench). Read the description and read carefully through the columns and make sure you understand them (you can ignore `dataset_subset_label`). The [paper](https://huggingface.co/papers/2311.11944) can also help you with that.
@@ -130,19 +141,29 @@ Run the same 10 questions from Task 1 through your RAG pipeline. For each questi
    Name the file **assignment2_run_and_compare**.
 3. A discussion in a markdown cell in the notebook addressing the three points above.
 
+comment for task 5:
+after you run the taks if you get bad score
+One thing you can try is creating a small vector store with 1-2 docs (just change the input to the vector store creation code) and then try running the retrieval code on those only and see what you get, and what goes wrong.
+Image
 ---
 
 ## Task 6 - evaluation (20 points)
 
 The most straightforward way to evaluate a RAG pipeline is by checking the final answer's correctness - compare it with the "ground truth", as we did in the previous assignment. But we can also evaluate specific components, which enables better fine-tuning of the pipeline. [Here](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/#retrieval-augmented-generation) you can find a partial list.
-In this task we'll evaluate with 3 measures:
 
-1. **Correctness** - direct comparison of the final answer and the ground truth, using an LLM as a judge. For the generation we used Llama-3.3-70B-Instruct. For the judge we'll use [a different model](https://api.deepseek.com/models) - DeepSeek-V3-0324. Write a short judge prompt that returns a binary verdict (correct / incorrect) plus a one-sentence justification.
+In this task we'll evaluate with 3 measures:
+The 3 measure are supposed to be automated - Correctness with a regular LLM as a judge (as you did in task 1), Faithfulness with RAGAS and Retrieval hit rate with just a formula.
+All can be run with code and LLM calls.
+Note that for Faithfulness I instructed to run only for 20 examples, but not due to manual work, but because it's very token consuming.
+
+
+1. **Correctness** - direct comparison of the final answer and the ground truth, using an LLM as a judge. For the generation we used Llama-3.3-70B-Instruct. For the judge we'll use [a different model](https://api.deepseek.com/models) - DeepSeek-V3.2 Write a short judge prompt that returns a binary verdict (correct / incorrect) plus a one-sentence justification.
+
 
 2. **Faithfulness** - check if the generation model actually relies on the retrieved information. Use [Ragas](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) Faithfulness from the collections API. Use `.score()` (the synchronous method), not `.ascore()`.
 
    **Notes:**
-   a. For the Ragas LLM use the same model as the Correctness judge (DeepSeek-V3-0324). Wrap it using `ragas.llms.llm_factory` with an `AsyncOpenAI` client configured for Nebius Token Factory.
+   a. For the Ragas LLM use the same model as the Correctness judge (DeepSeek-V3.2). Wrap it using `ragas.llms.llm_factory` with an `AsyncOpenAI` client configured for Nebius Token Factory.
    b. Ragas faithfulness makes multiple LLM calls per example → pretty slow. Therefore, evaluate with this measure only for the first 20 examples in your dataset, sorted by *financebench_id*.
 
 3. **Retrieval hit-rate** - check whether retrieval surfaced the evidence page for each question. The dataset's *evidence_page_num* field (inside the "evidence" column) tells you which page supports each answer. Use this as ground truth: for each question, retrieve the top-k chunks and check whether any of them came from the right page (compare each chunk's *page_number* metadata to *evidence_page_num*).
@@ -181,6 +202,9 @@ Run improvement experiments. For each experiment you'll run through the followin
 4. Chunk size.
    **Note:** changing chunk size means re-embedding and rebuilding the FAISS index. Save each version under a different name (e.g., faiss_chunk500, faiss_chunk1500) so you can compare.
 5. Adding a reranker - use BAAI/bge-reranker-base from Hugging Face as a second pass - retrieve top-20 with FAISS, then rerank to top-4 with the cross-encoder. When varying k, vary the k that reaches the generator; keep everything else at baseline.
+
+comment: 
+"Working capital" as a concept dosen't appear explicitly in the balance sheet, the relevant chunks contain row numbers ( current assets, current liabilities) without the term itself. The retriever finds chunks that mention "working capital" textually, but misses the balance sheet page that actually contain the answer on the reranker. A cross- encoder reranker rewards semantic similarity to the query- which makes the vocabulary mismatch worse. It will rank "working capital discussion" chunks above sheet numbers. I think chunk size and query reformulation should be higher leverage interventions than reranking for this hard dataset
 
 **Deliverables:**
 
