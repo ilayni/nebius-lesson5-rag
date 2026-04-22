@@ -67,3 +67,7 @@ Run at least 3 experiments varying **one thing at a time** from the Task 6 basel
 5. Reranker: `BAAI/bge-reranker-base` — retrieve top-20 with FAISS, rerank to top-4 with cross-encoder
 
 For faithfulness, reuse the same 20-question subsample across all experiments.
+
+# secuirty note 
+make sure `.env` is *not* zipped into the submission (`.gitignore` currently excludes it from git; double-check the zip).
+
