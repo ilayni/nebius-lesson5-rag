@@ -157,13 +157,13 @@ All can be run with code and LLM calls.
 Note that for Faithfulness I instructed to run only for 20 examples, but not due to manual work, but because it's very token consuming.
 
 
-1. **Correctness** - direct comparison of the final answer and the ground truth, using an LLM as a judge. For the generation we used Llama-3.3-70B-Instruct. For the judge we'll use [a different model](https://api.deepseek.com/models) - DeepSeek-V3.2 Write a short judge prompt that returns a binary verdict (correct / incorrect) plus a one-sentence justification.
+1. **Correctness** - direct comparison of the final answer and the ground truth, using an LLM as a judge. For the generation we used Llama-3.3-70B-Instruct. For the judge we'll use [a different model] - DeepSeek-V3.2 Write a short judge prompt that returns a binary verdict (correct / incorrect) plus a one-sentence justification.
 
 
-2. **Faithfulness** - check if the generation model actually relies on the retrieved information. Use [Ragas](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) Faithfulness from the collections API. Use `.score()` (the synchronous method), not `.ascore()`.
+2. **Faithfulness** - check if the generation model actually relies on the retrieved information. Use [Ragas](https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/) Faithfulness from the collections API. Use `.single_turn_score().` (the synchronous method), not `.ascore()`.
 
    **Notes:**
-   a. For the Ragas LLM use the same model as the Correctness judge (DeepSeek-V3.2). Wrap it using `ragas.llms.llm_factory` with an `AsyncOpenAI` client configured for Nebius Token Factory.
+   a. For the Ragas LLM use the same model as the Correctness judge (DeepSeek-V3.2). Wrap it using `ragas.llms.llm_factory` with an `OpenAI` client configured for Nebius Token Factory.
    b. Ragas faithfulness makes multiple LLM calls per example → pretty slow. Therefore, evaluate with this measure only for the first 20 examples in your dataset, sorted by *financebench_id*.
 
 3. **Retrieval hit-rate** - check whether retrieval surfaced the evidence page for each question. The dataset's *evidence_page_num* field (inside the "evidence" column) tells you which page supports each answer. Use this as ground truth: for each question, retrieve the top-k chunks and check whether any of them came from the right page (compare each chunk's *page_number* metadata to *evidence_page_num*).

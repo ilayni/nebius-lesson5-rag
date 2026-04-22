@@ -1,5 +1,8 @@
 # Task 1 – Naive Generation Insights
 
+> **Note:** auxiliary scratch file, not the deliverable. Some naive-answer numbers below (e.g. Corning figures) reflect an earlier LLM run; the canonical naive answers live in `assignment2_naive_generation_ilay_nisim_boris_kogan.xlsx` and the notebook.
+
+
 ## Dataset
 - 100 rows after filtering (dropped metrics-generated)
 - 50 domain-relevant, 50 novel-generated
