@@ -18,7 +18,7 @@ This is a Nebius Academy assignment (Assignment 2 - RAG). The objective is to bu
 |------|-------|
 | Generation | `meta-llama/Llama-3.3-70B-Instruct` (via Nebius) |
 | Embedding | `BAAI/bge-small-en-v1.5` (HuggingFace, local) |
-| Judge (correctness + Ragas) | `deepseek-ai/DeepSeek-V3-0324` (via Nebius) |
+| Judge (correctness + Ragas) | `deepseek-ai/DeepSeek-V3.2` (via Nebius) |
 
 ## Dataset
 
@@ -53,7 +53,7 @@ answer_with_rag(query: str, k: int = 4) -> dict
 
 ## Evaluation Metrics
 
-- **Correctness:** LLM-as-judge (DeepSeek-V3-0324), binary verdict + one-sentence justification. Run on full dataset.
+- **Correctness:** LLM-as-judge (DeepSeek-V3.2), binary verdict + one-sentence justification. Run on full dataset.
 - **Faithfulness:** Ragas `Faithfulness` via `.score()` (synchronous). Wrap DeepSeek with `ragas.llms.llm_factory` + `AsyncOpenAI`. Run on first 20 examples only (sorted by `financebench_id`) — it is slow.
 - **Retrieval hit-rate (page-hit@k):** For each question, retrieve top-k chunks and check if any chunk's `page_number` matches `evidence_page_num`. Report for k ∈ {1, 3, 5}. Count as a hit if *any* evidence page is retrieved (some questions have multiple evidence pages).
 
