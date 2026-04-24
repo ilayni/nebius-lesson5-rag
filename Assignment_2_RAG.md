@@ -188,7 +188,7 @@ Note that for Faithfulness I instructed to run only for 20 examples, but not due
 Run improvement experiments. For each experiment you'll run through the following steps:
 
 1. **Hypothesis** - which metric do you expect to improve, and why? (e.g., "increasing k should improve faithfulness because the model has more relevant context to ground in, but may hurt correctness if irrelevant chunks distract it.").
-2. **Change** - vary **one thing at a time** from the baseline (Task 6 results).
+2. **Change** - vary **one thing at a time** from the baseline (Task 6 results) the base line is task 6 aggregates/averages, eventually this is what you want to improve.
 3. **Measure** - re-run all three metrics.
 4. **Interpret** - did the metric you expected to move actually move? Did anything else move unexpectedly?
 
@@ -202,6 +202,8 @@ Run improvement experiments. For each experiment you'll run through the followin
 4. Chunk size.
    **Note:** changing chunk size means re-embedding and rebuilding the FAISS index. Save each version under a different name (e.g., faiss_chunk500, faiss_chunk1500) so you can compare.
 5. Adding a reranker - use BAAI/bge-reranker-base from Hugging Face as a second pass - retrieve top-20 with FAISS, then rerank to top-4 with the cross-encoder. When varying k, vary the k that reaches the generator; keep everything else at baseline.
+
+do at least 2 exepirments. 
 
 comment: 
 "Working capital" as a concept dosen't appear explicitly in the balance sheet, the relevant chunks contain row numbers ( current assets, current liabilities) without the term itself. The retriever finds chunks that mention "working capital" textually, but misses the balance sheet page that actually contain the answer on the reranker. A cross- encoder reranker rewards semantic similarity to the query- which makes the vocabulary mismatch worse. It will rank "working capital discussion" chunks above sheet numbers. I think chunk size and query reformulation should be higher leverage interventions than reranking for this hard dataset
