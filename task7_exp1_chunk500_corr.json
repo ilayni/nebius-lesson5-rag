@@ -1,0 +1,402 @@
+{
+ "financebench_id_00005": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it lacks the necessary information, while the ground truth provides a specific positive working capital figure."
+ },
+ "financebench_id_00070": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it lacks the necessary information, while the ground truth provides a specific numerical answer."
+ },
+ "financebench_id_00080": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot answer, while the ground truth provides a specific positive working capital figure."
+ },
+ "financebench_id_00206": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer fails to address the question and does not state that gross margin is irrelevant for a financial institution."
+ },
+ "financebench_id_00215": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer uses a different metric (capital expenditures as a percentage of operating revenues) to assess capital intensity, while the ground truth uses the capital intensity ratio (assets to revenue). The candidate's conclusion is the same (capital intensive), but the supporting metric differs, so the factual claim does not match the ground truth."
+ },
+ "financebench_id_00216": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer fails to provide the requested information and does not address the question about Verizon's liquidity profile or the relevance of the quick ratio."
+ },
+ "financebench_id_00222": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, while the ground truth provides a specific quick ratio and calculation, making the candidate incorrect."
+ },
+ "financebench_id_00283": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer calculates $70 million, but the ground truth is 77.78, which does not match."
+ },
+ "financebench_id_00288": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer provides specific figures and dates but does not confirm the 42% decline mentioned in the ground truth, making it incomplete."
+ },
+ "financebench_id_00299": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the information, while the ground truth specifies the Corporate segment with a net revenue of -$473 million."
+ },
+ "financebench_id_00302": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the same factual claim as the ground truth; it states the context lacks the answer, while the ground truth confirms positive growth."
+ },
+ "financebench_id_00382": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer specifies a specific property (Las Vegas Strip Resorts) and a precise dollar figure, while the ground truth states Las Vegas resorts contributed ~90% of EBITDAR, without specifying a property or exact amount."
+ },
+ "financebench_id_00394": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not have the information, while the ground truth provides a specific segment and net income figure."
+ },
+ "financebench_id_00407": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, but the ground truth provides a specific answer, so the candidate is incorrect."
+ },
+ "financebench_id_00438": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot answer, while the ground truth provides a specific numerical comparison of operating margins."
+ },
+ "financebench_id_00460": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer provides store counts (907 and 930) that do not match the ground truth counts (969 and 982), and the direction of change is opposite (ground truth shows a decrease from 982 to 969, while candidate shows a decrease from 930 to 907, but the specific numbers and percentage change are inconsistent)."
+ },
+ "financebench_id_00464": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly conveys the same factual claim as the ground truth, confirming Boeing's business is subject to cyclicality due to its exposure to the airline industry."
+ },
+ "financebench_id_00476": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, which does not convey the same factual claim as the ground truth that there are none."
+ },
+ "financebench_id_00494": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer provides specific production rate details not present in the ground truth, which only states a general increase."
+ },
+ "financebench_id_00499": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot answer, while the ground truth provides a clear answer with supporting metrics."
+ },
+ "financebench_id_00517": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly identifies the same categories and their approximate percentages as the ground truth, with minor rounding differences."
+ },
+ "financebench_id_00521": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the factual information that Ulta Beauty made no acquisitions in FY2023 and FY2022, as stated in the ground truth."
+ },
+ "financebench_id_00540": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, while the ground truth provides a specific inventory turnover figure."
+ },
+ "financebench_id_00552": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required factual information."
+ },
+ "financebench_id_00563": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, while the ground truth is 'Data Center'."
+ },
+ "financebench_id_00566": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that total debt increased, but the ground truth states that debt decreased by $229 million, indicating a mismatch in factual claims."
+ },
+ "financebench_id_00585": {
+  "verdict": "incorrect",
+  "justification": "The candidate refuses to answer, while the ground truth provides the effective tax rates for both years."
+ },
+ "financebench_id_00591": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required information, while the ground truth states a clear improvement in FCF conversion."
+ },
+ "financebench_id_00601": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, while the ground truth provides a specific explanation."
+ },
+ "financebench_id_00603": {
+  "verdict": "incorrect",
+  "justification": "The candidate does not provide the required information, stating the context lacks the answer, while the ground truth specifies the increase was due to the opening of 47 new stores."
+ },
+ "financebench_id_00605": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not have the information, while the ground truth provides a specific percentage."
+ },
+ "financebench_id_00606": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, while the ground truth provides a clear factual claim."
+ },
+ "financebench_id_00651": {
+  "verdict": "correct",
+  "justification": "The candidate correctly states that growth decelerates from 3.6% to 3.5%, matching the ground truth."
+ },
+ "financebench_id_00669": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, which is incorrect because the ground truth provides specific details about the drivers of gross margin change for JnJ in FY2022."
+ },
+ "financebench_id_00678": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, but the ground truth provides specific gross margin data, so the candidate is incorrect."
+ },
+ "financebench_id_00684": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it lacks the necessary context to answer, while the ground truth provides a specific answer about a slight decline in gross margins."
+ },
+ "financebench_id_00685": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, but the ground truth provides a specific answer, so the candidate is incorrect."
+ },
+ "financebench_id_00702": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, but the ground truth specifies a specific event that increased net income."
+ },
+ "financebench_id_00705": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states the increase amount as $400,000,000, matching the ground truth."
+ },
+ "financebench_id_00711": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states the context does not contain the answer, but the ground truth provides a specific numerical answer, so the candidate is incorrect."
+ },
+ "financebench_id_00720": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer fails to address the question and does not state that gross margin is not a useful metric for American Express, unlike the ground truth."
+ },
+ "financebench_id_00723": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer fails to address the question and does not match the ground truth's statement about performance measurement."
+ },
+ "financebench_id_00724": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, which does not convey the same factual claim as the ground truth."
+ },
+ "financebench_id_00735": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the factual information that Pepsico is not involved in material legal battles, instead stating the context lacks the answer, making it incorrect."
+ },
+ "financebench_id_00746": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states the context does not contain the answer, but the ground truth is that there are none, so the candidate is incorrect."
+ },
+ "financebench_id_00757": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the factual information that matches the ground truth."
+ },
+ "financebench_id_00790": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer fails to provide the requested information, while the ground truth provides a clear affirmative answer with supporting data."
+ },
+ "financebench_id_00799": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, but the ground truth provides a specific improvement in the quick ratio from 0.67 to 0.69, so the candidate is incorrect."
+ },
+ "financebench_id_00807": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the quick ratio information, while the ground truth provides a specific quick ratio value and assessment, making the candidate answer incorrect."
+ },
+ "financebench_id_00822": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer provides specific vote counts for two individuals, but the ground truth only names Richard A. Johnson, and the candidate answer does not confirm that Richard A. Johnson had substantially more votes against than the other nominees as required by the question."
+ },
+ "financebench_id_00839": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required factual information."
+ },
+ "financebench_id_00859": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not have the information, while the ground truth provides a specific answer."
+ },
+ "financebench_id_00882": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states the total amount as $8,400,000,000, matching the ground truth."
+ },
+ "financebench_id_00917": {
+  "verdict": "incorrect",
+  "justification": "The candidate does not provide the required information and instead states the context lacks the answer, which does not match the ground truth."
+ },
+ "financebench_id_00941": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, but the ground truth provides specific debt securities registered under 3M's name."
+ },
+ "financebench_id_00956": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required factual information and instead states the context does not contain the answer, which does not match the ground truth."
+ },
+ "financebench_id_00995": {
+  "verdict": "correct",
+  "justification": "The candidate answer lists the same major product categories as the ground truth, with minor wording differences."
+ },
+ "financebench_id_01009": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, while the ground truth provides a specific list of geographies."
+ },
+ "financebench_id_01028": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required information, while the ground truth specifies the geographies."
+ },
+ "financebench_id_01077": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the factual information requested about Best Buy's acquisitions, and thus does not match the ground truth."
+ },
+ "financebench_id_01079": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the requested information, while the ground truth provides specific acquisitions."
+ },
+ "financebench_id_01091": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer fails to provide the requested information, while the ground truth confirms the existence of legal battles."
+ },
+ "financebench_id_01107": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer is missing key legal battle areas mentioned in the ground truth, such as usual and customary pricing litigation and PBM investigations, and does not mention the $4.3 billion opioid settlement."
+ },
+ "financebench_id_01148": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly identifies the packaging industry, matching the ground truth's focus on packaging production."
+ },
+ "financebench_id_01163": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states that operations brought in the most cash flow, matching the ground truth."
+ },
+ "financebench_id_01198": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly identifies the same revenue drivers as the ground truth: higher EPYC server processor sales and higher semi-custom product sales, with the Xilinx inclusion implied by the segment data."
+ },
+ "financebench_id_01226": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, while the ground truth provides a specific explanation for the operating margin change."
+ },
+ "financebench_id_01244": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states that CVS Health paid a quarterly cash dividend of $0.55 per share in 2022, which matches the ground truth's claim of a $0.55 dividend per share in FY2022, confirming dividends were paid in Q2 of FY2022."
+ },
+ "financebench_id_01254": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, while the ground truth provides a clear affirmative answer."
+ },
+ "financebench_id_01275": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states the context does not contain the answer, but the ground truth provides a specific figure for operating activities, so the candidate is incorrect."
+ },
+ "financebench_id_01279": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required information, while the ground truth states that AMD brought in the most cashflow from Operations."
+ },
+ "financebench_id_01290": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states that the context does not contain the answer, but the ground truth provides a specific factual answer about Boeing's primary customers."
+ },
+ "financebench_id_01319": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required numerical value or state 0 as requested, and instead indicates lack of information."
+ },
+ "financebench_id_01328": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer incorrectly states 0, while the ground truth is $411 million."
+ },
+ "financebench_id_01346": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, while the ground truth provides a specific change from 20% to 23%."
+ },
+ "financebench_id_01351": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states the same effective tax rate change as the ground truth, with minor wording differences."
+ },
+ "financebench_id_01474": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the same factual claim as the ground truth."
+ },
+ "financebench_id_01476": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states the 1 percentage point increase in core constant currency EPS growth guidance, matching the ground truth."
+ },
+ "financebench_id_01482": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, which does not match the ground truth that the proposal was defeated."
+ },
+ "financebench_id_01484": {
+  "verdict": "incorrect",
+  "justification": "The candidate's US sales growth (3.3%) and international sales growth (-0.2%) do not match the ground truth (3.0% and -0.6%)."
+ },
+ "financebench_id_01487": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states the context does not contain the answer, but the ground truth provides a clear answer, so the candidate is incorrect."
+ },
+ "financebench_id_01488": {
+  "verdict": "incorrect",
+  "justification": "The candidate does not provide the required information, while the ground truth specifies the Consumer Health business segment."
+ },
+ "financebench_id_01490": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, while the ground truth provides a specific gain amount."
+ },
+ "financebench_id_01491": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states the cash proceeds as $13.2 billion, matching the ground truth."
+ },
+ "financebench_id_01858": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly states that 3M has increased its dividend for 65 consecutive years, which matches the ground truth's claim of increasing per share dividends for 65 years, confirming a stable trend."
+ },
+ "financebench_id_01865": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, which is incorrect because the ground truth provides a specific segment and percentage."
+ },
+ "financebench_id_01902": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not contain the answer, while the ground truth provides a specific answer."
+ },
+ "financebench_id_01911": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, while the ground truth provides a specific factual claim."
+ },
+ "financebench_id_01912": {
+  "verdict": "correct",
+  "justification": "The candidate answer correctly identifies MGM China as the region with the worst topline performance, matching the ground truth."
+ },
+ "financebench_id_01928": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the requested financial figure, while the ground truth states the adjusted EBITDA as $2,018 million."
+ },
+ "financebench_id_01930": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states a 0% change, which aligns with 'flat' growth, but it incorrectly states an increase of $7 million, which contradicts a flat change of 0%."
+ },
+ "financebench_id_01935": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not have the information, while the ground truth provides a specific answer."
+ },
+ "financebench_id_01936": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required information, while the ground truth specifies that 87% of the restructuring liability is related to employee liabilities."
+ },
+ "financebench_id_01964": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the required information, while the ground truth is 'Customer deposits'."
+ },
+ "financebench_id_01981": {
+  "verdict": "incorrect",
+  "justification": "The candidate does not provide the same factual claim as the ground truth."
+ },
+ "financebench_id_02024": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it cannot provide the answer, while the ground truth provides specific figures for pension and health care benefits."
+ },
+ "financebench_id_02049": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the same factual claim as the ground truth, which states that the risk decreased."
+ },
+ "financebench_id_02119": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not have the information, while the ground truth provides a specific value."
+ },
+ "financebench_id_02416": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer states it does not have the information, which does not match the ground truth."
+ },
+ "financebench_id_02419": {
+  "verdict": "incorrect",
+  "justification": "The candidate answer does not provide the same factual information as the ground truth."
+ }
+}
